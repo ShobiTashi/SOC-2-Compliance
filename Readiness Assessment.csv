@@ -1,0 +1,12 @@
+Gap,Criteria,Risk detail,Effort
+"Multi-factor authentication is not enforced on 3 administrator 
+accounts",CC6,"These accounts can reach all customer payroll and benefits 
+records with a password alone. A single stolen password could
+ expose regulated personal data.",Low: enforce MFA on the 3 accounts
+Backup restores have never been tested,A1,"Backups run daily but no one has confirmed they can actually be
+restored. A failed restore during an outage could lose customer 
+data.",Medium: run and document restore tests
+Logs are not aggregated or monitored,CC7,"The platform and identity provider generate logs, but nothing
+collects or reviews them, so a breach could go undetected.",Medium: stand up log aggregation and a monitoring routine
+No vendor risk management for the hosting provider,CC9,"Globex depends entirely on CloudScale and has no supplier
+inventory or due-diligence process for its most critical dependency.",Medium: build a supplier inventory and due-diligence review
